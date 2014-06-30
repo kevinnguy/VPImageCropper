@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8C58481960E54E00D5F166 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C58471960E54E00D5F166 /* VPImageCropperViewController.m */; };
+		0A8C584A1960E55C00D5F166 /* VPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C58491960E55C00D5F166 /* VPViewController.m */; };
 		D3BA1F7E18838EB000C225F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BA1F7D18838EB000C225F1 /* Foundation.framework */; };
 		D3BA1F8018838EB000C225F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BA1F7F18838EB000C225F1 /* CoreGraphics.framework */; };
 		D3BA1F8218838EB000C225F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BA1F8118838EB000C225F1 /* UIKit.framework */; };
@@ -14,14 +16,12 @@
 		D3BA1F8A18838EB000C225F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BA1F8918838EB000C225F1 /* main.m */; };
 		D3BA1F8E18838EB000C225F1 /* VPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BA1F8D18838EB000C225F1 /* VPAppDelegate.m */; };
 		D3BA1F9118838EB000C225F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BA1F8F18838EB000C225F1 /* Main.storyboard */; };
-		D3BA1F9418838EB000C225F1 /* VPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BA1F9318838EB000C225F1 /* VPViewController.m */; };
 		D3BA1F9618838EB100C225F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3BA1F9518838EB100C225F1 /* Images.xcassets */; };
 		D3BA1F9D18838EB100C225F1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BA1F9C18838EB100C225F1 /* XCTest.framework */; };
 		D3BA1F9E18838EB100C225F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BA1F7D18838EB000C225F1 /* Foundation.framework */; };
 		D3BA1F9F18838EB100C225F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BA1F8118838EB000C225F1 /* UIKit.framework */; };
 		D3BA1FA718838EB100C225F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3BA1FA518838EB100C225F1 /* InfoPlist.strings */; };
 		D3BA1FA918838EB100C225F1 /* VPImageCropperDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BA1FA818838EB100C225F1 /* VPImageCropperDemoTests.m */; };
-		D3BA1FB5188390EF00C225F1 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BA1FB4188390EF00C225F1 /* VPImageCropperViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A8C58461960E54E00D5F166 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		0A8C58471960E54E00D5F166 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
+		0A8C58491960E55C00D5F166 /* VPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPViewController.m; sourceTree = "<group>"; };
 		D3BA1F7A18838EB000C225F1 /* VPImageCropperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPImageCropperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BA1F7D18838EB000C225F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D3BA1F7F18838EB000C225F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,15 +50,12 @@
 		D3BA1F8D18838EB000C225F1 /* VPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPAppDelegate.m; sourceTree = "<group>"; };
 		D3BA1F9018838EB000C225F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3BA1F9218838EB000C225F1 /* VPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPViewController.h; sourceTree = "<group>"; };
-		D3BA1F9318838EB000C225F1 /* VPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPViewController.m; sourceTree = "<group>"; };
 		D3BA1F9518838EB100C225F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D3BA1F9B18838EB100C225F1 /* VPImageCropperDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPImageCropperDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BA1F9C18838EB100C225F1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D3BA1FA418838EB100C225F1 /* VPImageCropperDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VPImageCropperDemoTests-Info.plist"; sourceTree = "<group>"; };
 		D3BA1FA618838EB100C225F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3BA1FA818838EB100C225F1 /* VPImageCropperDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperDemoTests.m; sourceTree = "<group>"; };
-		D3BA1FB3188390EF00C225F1 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
-		D3BA1FB4188390EF00C225F1 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +120,7 @@
 				D3BA1F8D18838EB000C225F1 /* VPAppDelegate.m */,
 				D3BA1F8F18838EB000C225F1 /* Main.storyboard */,
 				D3BA1F9218838EB000C225F1 /* VPViewController.h */,
-				D3BA1F9318838EB000C225F1 /* VPViewController.m */,
+				0A8C58491960E55C00D5F166 /* VPViewController.m */,
 				D3BA1F9518838EB100C225F1 /* Images.xcassets */,
 				D3BA1F8418838EB000C225F1 /* Supporting Files */,
 			);
@@ -159,8 +159,8 @@
 		D3BA1FB2188390EF00C225F1 /* VPImageCropper */ = {
 			isa = PBXGroup;
 			children = (
-				D3BA1FB3188390EF00C225F1 /* VPImageCropperViewController.h */,
-				D3BA1FB4188390EF00C225F1 /* VPImageCropperViewController.m */,
+				0A8C58461960E54E00D5F166 /* VPImageCropperViewController.h */,
+				0A8C58471960E54E00D5F166 /* VPImageCropperViewController.m */,
 			);
 			path = VPImageCropper;
 			sourceTree = "<group>";
@@ -263,9 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3BA1FB5188390EF00C225F1 /* VPImageCropperViewController.m in Sources */,
-				D3BA1F9418838EB000C225F1 /* VPViewController.m in Sources */,
+				0A8C58481960E54E00D5F166 /* VPImageCropperViewController.m in Sources */,
 				D3BA1F8E18838EB000C225F1 /* VPAppDelegate.m in Sources */,
+				0A8C584A1960E55C00D5F166 /* VPViewController.m in Sources */,
 				D3BA1F8A18838EB000C225F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
