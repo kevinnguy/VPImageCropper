@@ -43,9 +43,9 @@
 - (void)editPortrait {
     UIActionSheet *choiceSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self
-                                                    cancelButtonTitle:@"取消"
+                                                    cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"拍照", @"从相册中选取", nil];
+                                                    otherButtonTitles:@"From Camera", @"Select From Photos", nil];
     [choiceSheet showInView:self.view];
 }
 
@@ -65,7 +65,6 @@
 #pragma mark UIActionSheetDelegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
-        // 拍照
         if ([self isCameraAvailable] && [self doesCameraSupportTakingPhotos]) {
             UIImagePickerController *controller = [[UIImagePickerController alloc] init];
             controller.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -84,7 +83,6 @@
         }
         
     } else if (buttonIndex == 1) {
-        // 从相册中选取
         if ([self isPhotoLibraryAvailable]) {
             UIImagePickerController *controller = [[UIImagePickerController alloc] init];
             controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -107,7 +105,14 @@
         UIImage *portraitImg = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
         portraitImg = [self imageByScalingToMaxSize:portraitImg];
         // present the cropper view controller
-        VPImageCropperViewController *imgCropperVC = [[VPImageCropperViewController alloc] initWithImage:portraitImg cropFrame:CGRectMake(0, 100.0f, self.view.frame.size.width, self.view.frame.size.width) limitScaleRatio:3.0];
+        int yOffset = (CGRectGetHeight(self.view.frame) - CGRectGetWidth(self.view.frame)) / 2;
+        VPImageCropperViewController *imgCropperVC = [[VPImageCropperViewController alloc] initWithImage:portraitImg
+                                                                                               cropFrame:CGRectMake(0,
+                                                                                                                    yOffset,
+                                                                                                                    CGRectGetWidth(self.view.frame),
+                                                                                                                    CGRectGetWidth(self.view.frame))
+                                                                                         limitScaleRatio:3.0
+                                                                                               cropColor:[UIColor purpleColor]];
         imgCropperVC.delegate = self;
         [self presentViewController:imgCropperVC animated:YES completion:^{
             // TO DO

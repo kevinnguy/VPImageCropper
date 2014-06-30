@@ -23,6 +23,6 @@
 @property (nonatomic, assign) id<VPImageCropperDelegate> delegate;
 @property (nonatomic, assign) CGRect cropFrame;
 
-- (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio;
+- (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio cropColor:(UIColor *)cropColor;
 
 @end

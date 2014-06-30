@@ -26,6 +26,7 @@
 
 @property (nonatomic, assign) CGRect latestFrame;
 
+@property (nonatomic, strong) UIColor *cropColor;
 @end
 
 @implementation VPImageCropperViewController
@@ -38,12 +39,14 @@
     self.ratioView = nil;
 }
 
-- (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio {
+- (id)initWithImage:(UIImage *)originalImage cropFrame:(CGRect)cropFrame limitScaleRatio:(NSInteger)limitRatio cropColor:(UIColor *)cropColor
+{
     self = [super init];
     if (self) {
         self.cropFrame = cropFrame;
         self.limitRatio = limitRatio;
         self.originalImage = [self fixOrientation:originalImage];
+        self.cropColor = cropColor;
     }
     return self;
 }
@@ -62,7 +65,7 @@
 - (void)initView {
     self.view.backgroundColor = [UIColor blackColor];
     
-    self.showImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.showImgView = [[UIImageView alloc] initWithFrame:self.view.frame];
     [self.showImgView setMultipleTouchEnabled:YES];
     [self.showImgView setUserInteractionEnabled:YES];
     [self.showImgView setImage:self.originalImage];
@@ -91,7 +94,7 @@
     [self.view addSubview:self.overlayView];
     
     self.ratioView = [[UIView alloc] initWithFrame:self.cropFrame];
-    self.ratioView.layer.borderColor = [UIColor yellowColor].CGColor;
+    self.ratioView.layer.borderColor = self.cropColor.CGColor;
     self.ratioView.layer.borderWidth = 1.0f;
     self.ratioView.autoresizingMask = UIViewAutoresizingNone;
     [self.view addSubview:self.ratioView];
@@ -100,8 +103,8 @@
 }
 
 - (void)initControlBtn {
-    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50.0f, 100, 50)];
-    cancelBtn.backgroundColor = [UIColor blackColor];
+    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 44.0f, 100, 50)];
+    cancelBtn.backgroundColor = [UIColor clearColor];
     cancelBtn.titleLabel.textColor = [UIColor whiteColor];
     [cancelBtn setTitle:@"Cancel" forState:UIControlStateNormal];
     [cancelBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
@@ -112,8 +115,8 @@
     [cancelBtn addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelBtn];
     
-    UIButton *confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100.0f, self.view.frame.size.height - 50.0f, 100, 50)];
-    confirmBtn.backgroundColor = [UIColor blackColor];
+    UIButton *confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100.0f, 44.0f, 100, 50)];
+    confirmBtn.backgroundColor = [UIColor clearColor];
     confirmBtn.titleLabel.textColor = [UIColor whiteColor];
     [confirmBtn setTitle:@"OK" forState:UIControlStateNormal];
     [confirmBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
